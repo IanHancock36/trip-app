@@ -1,0 +1,14 @@
+{
+    "trips" :[
+        {"title": "2 night stay in Anchorage",
+            "price":"$195"
+        }, {"title": "2 night stay in Colorado",
+            "price":"$395"
+        }, {"title": "3 night stay in Kenai",
+            "price":"$495"
+        }
+        
+
+    ]
+
+}
