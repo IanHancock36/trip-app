@@ -1,12 +1,15 @@
-import React,{useState} from 'react'
-const [trips,setTrips] = useState([])
-fetch(" http://localhost:3000/trips")
-.then(response => response.json())
-.then(json => console.log(json))
+import React, { useState, useEffect} from 'react'
+
 export default function TripList() {
+    const [trips, setTrips] = useState([])
+    console.log(trips)
+
+    fetch(" http://localhost:3000/trips")
+        .then(response => response.json())
+        .then(json => setTrips(json))
     return (
         <div>
-           <h2>Trip List</h2> 
+            <h2>Trips</h2>
         </div>
     )
 }
