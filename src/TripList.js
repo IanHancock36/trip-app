@@ -21,10 +21,10 @@ export default function TripList() {
                 ))}
             </ul>
             <div>
-                <button onClick={()=> setUrl("http://localhost:3000/trips?loc=us")}>
+                <button onClick={()=> setUrl('http://localhost:3000/trips?loc=us')}>
                     Us Trip
                 </button>
-                <button>
+                <button onClick={()=> setUrl("http://localhost:3000/trips")}>
                  All Trips 
                 </button>
             </div>
