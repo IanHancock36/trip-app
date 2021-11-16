@@ -1,11 +1,20 @@
 {
     "trips" :[
         {"title": "2 night stay in Anchorage",
-          "id":"1",  "price":"$195"
-        }, {"title": "2 night stay in Colorado",
-            "id":"2", "price":"$395"
-        }, {"title": "3 night stay in Kenai",
-            "id":"3","price":"$495"
+          "id":"1",  
+          "price":"$195",
+          "loc":"us"
+
+        }, 
+        {"title": "2 night stay in Colorado",
+            "id":"2",
+            "price":"$395",
+            "loc":"us"
+        }, 
+        {"title": "3 night stay in Kenai",
+            "id":"3",
+            "price":"$495",
+            "loc":"us"
         }
         ]
 
