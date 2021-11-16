@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-
+import './TripList.css'
 export default function TripList() {
     const [trips, setTrips] = useState([])
     console.log(trips)
@@ -9,11 +9,11 @@ export default function TripList() {
     .then(json => setTrips(json))
 }, [])
     return (
-        <div>
+        <div className='trip-list'>
             <h2>Trips</h2>
-            <ul>
+            <ul className='trip-list ul'>
                 {trips.map(trip =>(
-                   <li key={trip.id}>
+                   <li className=" trip-list li"key={trip.id}>
                        <h3>{trip.title}</h3>
                        <p>{trip.price}</p>
                    </li> 
