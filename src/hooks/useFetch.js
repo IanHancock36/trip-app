@@ -1,6 +1,6 @@
-import {useState,useEffect} from react 
+import {useState,useEffect} from 'react' 
 
-const useFetch = (url)=> {
+export const useFetch = (url)=> {
  const [data,setData] =useState(null)
  useEffect(()=> {
      const fetchData = async ()=> {
@@ -12,7 +12,7 @@ const useFetch = (url)=> {
      return{data}
  },[url])
 }
-export default useFetch
+
 
 // if you pass the async function inside the useEffect that is why you do not
 // have to make it a dependancy in the dependacy array. 
