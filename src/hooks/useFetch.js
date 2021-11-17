@@ -5,9 +5,12 @@ const useFetch = (url)=> {
  useEffect(()=> {
      const fetchData = async ()=> {
          const res = await fetch(url)
-        const json = await res.json
+        const json = await res.json()
+        setData(json)
      }
- },[])
+     fetchData()
+     return{data}
+ },[url])
 }
 export default useFetch
 
@@ -17,3 +20,4 @@ export default useFetch
 
 //you cannot make the useEffect a async funtion but you can make a asnyc funtion
 // inside the useEffect which is above. 
+// passing in the url in as a dependacy will allow when the url changes the useEffect will re run
