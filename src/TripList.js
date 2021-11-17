@@ -1,14 +1,18 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect ,useCallback} from 'react'
 import './TripList.css'
 export default function TripList() {
     const [trips, setTrips] = useState([])
     const [url , setUrl] =useState("http://localhost:3000/trips")
     console.log(trips)
-  useEffect(()=> {
-    fetch(url)
-    .then(response => response.json())
-    .then(json => setTrips(json))
-}, [url])
+    
+    const fetchTrips = useCallback(async () => {
+      const response = await fetch(url)
+      const json = await response.json()
+      setTrips(json)
+  },[url])
+   useEffect(()=> {
+   fetchTrips()
+}, [fetchTrips])
     return (
         <div className='trip-list'>
             <h2>Trips</h2>
